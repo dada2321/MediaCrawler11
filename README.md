@@ -94,14 +94,32 @@
 
 **🔰 完全小白用户（推荐）**：
 ```bash
-# 一键安装和启动（自动处理所有依赖）
+# 一键安装和启动（自动处理所有依赖，使用 uv 方式）
 python 一键启动.py
 ```
 
-**🧑‍💻 有经验用户**：
+**🧑‍💻 有经验用户（推荐使用 uv）**：
 ```bash
-# 安装 Web 依赖
+# 使用 uv 安装依赖（与原项目保持一致）
+uv sync
+uv pip install fastapi uvicorn psutil pydantic
+uv run playwright install
+
+# 启动 Web 服务
+uv run python start_web.py
+```
+
+**🔧 传统方式（备用）**：
+```bash
+# 创建虚拟环境
+python -m venv venv
+source venv/bin/activate  # Linux/Mac
+# venv\Scripts\activate   # Windows
+
+# 安装依赖
+pip install -r requirements.txt
 pip install -r web_requirements.txt
+playwright install
 
 # 启动 Web 服务
 python start_web.py

@@ -34,20 +34,57 @@ MediaCrawler Web 管理平台为原有的命令行爬虫工具提供了现代化
 
 ### 1. 安装依赖
 
+**推荐方式（使用 uv）**：
 ```bash
-# 安装 Web API 依赖
-pip install -r web_requirements.txt
+# 安装项目依赖（与原项目保持一致）
+uv sync
 
-# 安装前端依赖（可选，仅开发时需要）
+# 安装 Web API 额外依赖
+uv pip install fastapi uvicorn psutil pydantic
+
+# 安装浏览器驱动
+uv run playwright install
+```
+
+**传统方式（备用）**：
+```bash
+# 创建虚拟环境
+python -m venv venv
+source venv/bin/activate  # Linux/Mac
+# venv\Scripts\activate   # Windows
+
+# 安装依赖
+pip install -r requirements.txt
+pip install -r web_requirements.txt
+playwright install
+```
+
+**前端开发（可选）**：
+```bash
+# 安装前端依赖（仅开发时需要）
 cd frontend
 npm install
 ```
 
 ### 2. 启动 Web 服务
 
+**推荐方式（使用 uv）**：
 ```bash
-# 启动 Web API 服务器
-python web_api.py
+# 使用 uv 启动 Web 服务
+uv run python start_web.py
+
+# 或直接启动 API 服务器
+uv run python web_api.py
+```
+
+**传统方式**：
+```bash
+# 确保虚拟环境已激活
+# source venv/bin/activate  # Linux/Mac
+# venv\Scripts\activate     # Windows
+
+# 启动 Web 服务
+python start_web.py
 ```
 
 服务启动后，访问以下地址：

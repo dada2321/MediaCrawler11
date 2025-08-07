@@ -20,6 +20,15 @@ if %errorlevel% neq 0 (
     exit /b 1
 )
 
+REM 检查 uv 是否安装
+echo 🔍 检查 uv 包管理工具...
+uv --version >nul 2>&1
+if %errorlevel% neq 0 (
+    echo ⚠️  uv 未安装，将使用传统方式
+) else (
+    echo ✅ uv 已安装，将使用 uv 方式启动
+)
+
 REM 运行一键启动脚本
 python "一键启动.py"
 
