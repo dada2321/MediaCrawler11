@@ -1,0 +1,32 @@
+.app-layout {
+  min-height: 100vh;
+}
+
+.app-content {
+  padding: 0;
+  background: #f5f5f5;
+}
+
+.logo {
+  height: 32px;
+  margin: 16px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+}
+
+.ant-layout-sider-collapsed .logo {
+  margin: 16px 8px;
+}
+
+.menu-icon {
+  margin-right: 8px;
+}
+
+.ant-layout-sider-collapsed .menu-icon {
+  margin-right: 0;
+}
