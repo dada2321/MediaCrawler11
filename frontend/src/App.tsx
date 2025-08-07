@@ -1,0 +1,30 @@
+import { Routes, Route } from 'react-router-dom'
+import { Layout } from 'antd'
+import Sidebar from './components/Sidebar'
+import Dashboard from './pages/Dashboard'
+import CrawlerControl from './pages/CrawlerControl'
+import DataViewer from './pages/DataViewer'
+import ConfigManager from './pages/ConfigManager'
+import './App.css'
+
+const { Content } = Layout
+
+function App() {
+  return (
+    <Layout style={{ minHeight: '100vh' }}>
+      <Sidebar />
+      <Layout>
+        <Content>
+          <Routes>
+            <Route path="/" element={<Dashboard />} />
+            <Route path="/crawler" element={<CrawlerControl />} />
+            <Route path="/data" element={<DataViewer />} />
+            <Route path="/config" element={<ConfigManager />} />
+          </Routes>
+        </Content>
+      </Layout>
+    </Layout>
+  )
+}
+
+export default App

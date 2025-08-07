@@ -79,6 +79,36 @@
 点击查看：[MediaCrawlerPro 项目主页](https://github.com/MediaCrawlerPro) 更多介绍
 </details>
 
+## 🌐 Web 管理界面
+
+**全新推出！** MediaCrawler 现在提供现代化的 Web 管理界面，让您能够更加便捷地管理和分析爬取的数据。
+
+### ✨ Web 界面特性
+
+- 📊 **实时数据概览**: 统计图表、平台分布、活动时间线
+- 🎮 **可视化爬虫控制**: 图形化启动/停止、参数配置、状态监控
+- 📋 **数据管理系统**: 搜索筛选、详情查看、数据导出
+- ⚙️ **配置管理界面**: 可视化配置编辑、导入导出
+
+### 🚀 启动 Web 界面
+
+```bash
+# 安装 Web 依赖
+pip install -r web_requirements.txt
+
+# 启动 Web 服务（推荐）
+python start_web.py
+
+# 或直接启动 API 服务
+python web_api.py
+```
+
+访问 http://localhost:8000 即可使用 Web 管理界面！
+
+详细使用说明请查看 [Web 平台文档](README_WEB.md)
+
+---
+
 ## 🚀 快速开始
 
 > 💡 **开源不易，如果这个项目对您有帮助，请给个 ⭐ Star 支持一下！**
