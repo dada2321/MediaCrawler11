@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import {
   Card,
-  Table,
   Select,
   Input,
   Button,
@@ -17,6 +16,7 @@ import {
   Image,
   Tooltip,
 } from 'antd'
+import DataTable from '../components/DataTable'
 import {
   SearchOutlined,
   DownloadOutlined,
@@ -305,7 +305,7 @@ export default function DataViewer() {
 
       {/* Data Table */}
       <Card className="data-table">
-        <Table
+        <DataTable
           columns={columns}
           dataSource={posts}
           rowKey="id"
@@ -405,7 +405,7 @@ export default function DataViewer() {
         width={800}
         footer={null}
       >
-        <Table
+        <DataTable
           columns={commentColumns}
           dataSource={comments}
           rowKey="id"

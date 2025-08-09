@@ -1,5 +1,6 @@
-import { Row, Col, Card, Statistic, Typography, Space } from 'antd'
+import { Row, Col, Typography, Space } from 'antd'
 import { UserOutlined, FileTextOutlined, CommentOutlined, EyeOutlined } from '@ant-design/icons'
+import ChartCard from '../components/ChartCard'
 import ReactECharts from 'echarts-for-react'
 import { useQuery } from '@tanstack/react-query'
 import { getStats, getPlatformData, getRecentActivity } from '../services/api'
@@ -103,44 +104,36 @@ export default function Dashboard() {
       {/* Statistics Cards */}
       <Row gutter={[24, 24]} style={{ marginBottom: 24 }}>
         <Col xs={24} sm={12} lg={6}>
-          <Card className="stats-card">
-            <Statistic
-              title="总帖子数"
-              value={stats?.totalPosts || 0}
-              prefix={<FileTextOutlined />}
-              valueStyle={{ color: '#1890ff' }}
-            />
-          </Card>
+          <ChartCard
+            title="总帖子数"
+            value={stats?.totalPosts || 0}
+            icon={<FileTextOutlined />}
+            color="#1890ff"
+          />
         </Col>
         <Col xs={24} sm={12} lg={6}>
-          <Card className="stats-card">
-            <Statistic
-              title="总评论数"
-              value={stats?.totalComments || 0}
-              prefix={<CommentOutlined />}
-              valueStyle={{ color: '#52c41a' }}
-            />
-          </Card>
+          <ChartCard
+            title="总评论数"
+            value={stats?.totalComments || 0}
+            icon={<CommentOutlined />}
+            color="#52c41a"
+          />
         </Col>
         <Col xs={24} sm={12} lg={6}>
-          <Card className="stats-card">
-            <Statistic
-              title="总用户数"
-              value={stats?.totalUsers || 0}
-              prefix={<UserOutlined />}
-              valueStyle={{ color: '#faad14' }}
-            />
-          </Card>
+          <ChartCard
+            title="总用户数"
+            value={stats?.totalUsers || 0}
+            icon={<UserOutlined />}
+            color="#faad14"
+          />
         </Col>
         <Col xs={24} sm={12} lg={6}>
-          <Card className="stats-card">
-            <Statistic
-              title="总浏览量"
-              value={stats?.totalViews || 0}
-              prefix={<EyeOutlined />}
-              valueStyle={{ color: '#f5222d' }}
-            />
-          </Card>
+          <ChartCard
+            title="总浏览量"
+            value={stats?.totalViews || 0}
+            icon={<EyeOutlined />}
+            color="#f5222d"
+          />
         </Col>
       </Row>
 

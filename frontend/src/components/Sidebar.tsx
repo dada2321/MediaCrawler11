@@ -6,6 +6,7 @@ import {
   ControlOutlined,
   DatabaseOutlined,
   SettingOutlined,
+  BarChartOutlined,
   MenuFoldOutlined,
   MenuUnfoldOutlined,
 } from '@ant-design/icons'
@@ -32,6 +33,11 @@ const menuItems = [
     key: '/config',
     icon: <SettingOutlined />,
     label: '配置管理',
+  },
+  {
+    key: '/analytics',
+    icon: <BarChartOutlined />,
+    label: '数据分析',
   },
 ]
 
