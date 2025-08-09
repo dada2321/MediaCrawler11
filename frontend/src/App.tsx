@@ -6,6 +6,7 @@ import Dashboard from './pages/Dashboard'
 import CrawlerControl from './pages/CrawlerControl'
 import DataViewer from './pages/DataViewer'
 import ConfigManager from './pages/ConfigManager'
+import Analytics from './pages/Analytics'
 import './App.css'
 
 const { Content } = Layout
@@ -22,6 +23,7 @@ function App() {
             <Route path="/crawler" element={<CrawlerControl />} />
             <Route path="/data" element={<DataViewer />} />
             <Route path="/config" element={<ConfigManager />} />
+            <Route path="/analytics" element={<Analytics />} />
           </Routes>
         </Content>
       </Layout>

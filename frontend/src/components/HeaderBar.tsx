@@ -8,6 +8,7 @@ const routeTitleMap: Record<string, string> = {
   '/crawler': '爬虫控制',
   '/data': '数据管理',
   '/config': '配置管理',
+  '/analytics': '数据分析',
 }
 
 export default function HeaderBar() {
