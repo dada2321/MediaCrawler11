@@ -1,6 +1,7 @@
 import { Routes, Route } from 'react-router-dom'
 import { Layout } from 'antd'
 import Sidebar from './components/Sidebar'
+import HeaderBar from './components/HeaderBar'
 import Dashboard from './pages/Dashboard'
 import CrawlerControl from './pages/CrawlerControl'
 import DataViewer from './pages/DataViewer'
@@ -14,7 +15,8 @@ function App() {
     <Layout style={{ minHeight: '100vh' }}>
       <Sidebar />
       <Layout>
-        <Content>
+        <HeaderBar />
+        <Content style={{ padding: '24px' }}>
           <Routes>
             <Route path="/" element={<Dashboard />} />
             <Route path="/crawler" element={<CrawlerControl />} />
